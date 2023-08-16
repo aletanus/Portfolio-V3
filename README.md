@@ -1,10 +1,6 @@
 # My Portfolio - Version III
 
-<!-- CONTACT -->
-
-## Contact
-
-### Alessandro Tanus
+## Alessandro Tanus
 
  <div align="center">
  <a href="https://www.linkedin.com/in/alessandro-tanus/"><img src="https://img.shields.io/badge/linkedin-%230070f3.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin"></a>  
