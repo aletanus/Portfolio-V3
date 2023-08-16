@@ -8,8 +8,6 @@
  <a href="mailto:alessandro.tanus@gmail.com"><img src="https://img.shields.io/badge/Gmail-0070f3?style=for-the-badge&logo=gmail&logoColor=white" alt="Linkedin"></a>
  </div>
 
- ## 
-
 ![image](https://github.com/aletanus/aletanus/assets/106698505/de184fee-9b0b-4f5b-94ab-ab6e37bfe724)
 
 ## Built With
