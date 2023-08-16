@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+#curved-h-mask,
+#c-mask,
+#period,
+#vertical-h-mask {
+  fill: $accent;
+  stroke: $accent;
+  transition: fill 0.25s ease;
+}
+
+#logo-img {
+  transition: box-shadow 0.15s ease, scale 0.25s ease;
+  scale: 1;
+
+  &:hover {
+    scale: 1.08;
+  }
+}
