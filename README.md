@@ -1,7 +1,4 @@
 # My Portfolio - Version III
-
-## Alessandro Tanus
-
  <div align="center">
  <a href="https://www.linkedin.com/in/alessandro-tanus/"><img src="https://img.shields.io/badge/linkedin-%230070f3.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin"></a>  
  <a href="https://github.com/aletanus"><img src="https://img.shields.io/badge/github-%230070f3.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a> 
