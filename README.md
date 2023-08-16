@@ -4,6 +4,7 @@
 ![image](https://github.com/aletanus/aletanus/assets/106698505/de184fee-9b0b-4f5b-94ab-ab6e37bfe724)
 
 ## Contact:
+<br/>
 
  <div align="center">
  <a href="https://www.linkedin.com/in/alessandro-tanus/"><img src="https://img.shields.io/badge/linkedin-%230070f3.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin"></a>  
