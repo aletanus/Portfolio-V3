@@ -124,7 +124,7 @@ const Navigation = () => {
               target={"_blank"}
               download
             >
-              <button tabIndex={-1}>Resume</button>
+              <button onClick={() => window.open('/assets/Curriculum Vitae - Alessandro Tanus.pdf', '_blank')}  tabIndex={-1}>Resume</button>
             </Link>
           </a.li>
           <li aria-label="Toggle dark mode">
