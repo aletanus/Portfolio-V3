@@ -11,9 +11,9 @@
 
   position: relative;
   inset: 0;
-  pointer-events: none;
 
   #canvas {
+    z-index: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -90,6 +90,7 @@
 
     a {
       width: fit-content;
+      z-index: 1;
     }
   }
 }
