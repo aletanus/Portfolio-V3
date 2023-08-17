@@ -119,7 +119,7 @@ const MobileNavigation = () => {
           </li>
           <li className="navigation__linkResume">
             <a href="/assets/Curriculum Vitae - Alessandro Tanus.pdf" rel="noreferrer noopener" download target={'_blank'}>
-              <button tabIndex={-1}>Resume</button>
+              <button onClick={() => window.open('/assets/Curriculum Vitae - Alessandro Tanus.pdf', '_blank')}  tabIndex={-1}>Resume</button>
             </a>
           </li>
         </ul>
