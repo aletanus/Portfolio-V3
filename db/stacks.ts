@@ -16,6 +16,7 @@ const stacks = [
   { title: "Nest", img: "/stacks/nest-js.svg" },
   { title: "Prisma", img: "/stacks/prisma-orm.svg" },
   { title: "Jest", img: "/stacks/jest.svg" },
+  { title: "Cypress", img: "/stacks/cypress.svg" },
   { title: "JWT", img: "/stacks/jwt.svg" },
   { title: "Git", img: "/stacks/git.svg" },
   { title: "GitHub", img: FaGithub },
