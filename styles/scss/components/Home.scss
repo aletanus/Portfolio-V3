@@ -1,0 +1,120 @@
+@use '../abstracts' as *;
+
+.hero {
+  margin-top: 0;
+  min-height: calc(100vh - 7rem);
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  inset: 0;
+  pointer-events: none;
+
+  #canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  > .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .hero__image {
+      flex: var(--image-ratio);
+      display: flex;
+      justify-content: center;
+
+      img {
+        min-width: 220px;
+        width: 40%;
+        height: max-content;
+        box-shadow: 0 0 0 0.025rem $line, 0 0.25rem 0.5rem 0 $shadow;
+        background-color: $theme-light-0;
+        border-radius: 50%;
+        object-fit: contain;
+        transition: box-shadow 0.15s ease, scale 0.25s ease;
+        scale: 1.0025;
+
+        &:hover {
+          scale: 1.1;
+          box-shadow: 0 0 0 0.025rem $line, 0 0.25rem 1rem 0 $shadow;
+        }
+      }
+    }
+
+    h1 {
+      font-weight: 600;
+      font-family: $nunito-sans;
+      font-size: 18px;
+      padding: 0;
+      margin-top: 2rem;
+      color: var(--text-light);
+    }
+
+    h2 {
+      --min-fs: 37.5px;
+
+      background: linear-gradient(to right, $accent-dark, $accent, $accent-dark);
+      background-size: 200%;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: break-spaces;
+      line-height: 1.1;
+      margin: 1rem 0;
+      width: fit-content;
+      animation: background-pan 10s linear infinite;
+      font-size: clamp(var(--min-fs), 6vw, 4rem);
+    }
+
+    h3 {
+      --min-fs: 35px;
+
+      line-height: 1.1;
+      font-size: clamp(var(--min-fs), 6vw, 4rem);
+    }
+
+    p {
+      margin-top: 0rem;
+      margin-bottom: 2rem;
+      font-size: 1rem !important;
+      width: min(500px, 100%);
+      color: $text;
+    }
+
+    a {
+      width: fit-content;
+    }
+  }
+}
+
+:root.dark {
+  .section-wrapper {
+    .hero__image {
+      img {
+        box-shadow: 0 0 0 0.05rem $theme-light-0, 0 0 0.5rem $shadow;
+        background: linear-gradient($theme, 40%, $theme-light-0);
+
+        &:hover {
+          box-shadow: 0 0 0 0.05rem $accent, 0 0 0.5rem $shadow;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    > .section-wrapper {
+      > h1 {
+        font-size: 16px;
+      }
+    }
+  }
+}
