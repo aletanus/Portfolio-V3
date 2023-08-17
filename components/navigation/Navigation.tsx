@@ -93,7 +93,7 @@ const Navigation = () => {
           <a.li style={springs[2]}>
             <Link
               href="#featured"
-              className={sectionActiveFor(["featured", "projects"])}
+              className={sectionActiveFor(["featured"])}
               scroll={false}
             >
               Projects
@@ -119,7 +119,7 @@ const Navigation = () => {
           </a.li>
           <a.li className="navigation__linkResume" style={springs[5]}>
             <Link
-              href="/assets/Resume-Alessandro-Tanus-EN.pdf"
+              href="/assets/Curriculum Vitae - Alessandro Tanus.pdf"
               rel="noreferrer noopener"
               target={"_blank"}
               download

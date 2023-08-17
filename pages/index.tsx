@@ -7,7 +7,7 @@ import useIntersectionObservers from "../hooks/useIntersectionObservers";
 import About from "../components/about/About";
 import Stacks from "../components/stacks/Stacks";
 import FeaturedProjects from "../components/projects/FeaturedProjects";
-import Projects from "../components/projects/Projects";
+// import Projects from "../components/projects/Projects";
 // import Testimonials from "../components/testimonials/Testimonials";
 import Contact from "../components/contact/Contact";
 
@@ -16,8 +16,8 @@ const Home = () => {
   const aboutRef = useRef(null);
   const stacksRef = useRef(null);
   const featuredRef = useRef(null);
-  const projectsRef = useRef(null);
-  const recomendationRef = useRef(null);
+  // const projectsRef = useRef(null);
+  // const recomendationRef = useRef(null);
   const contactRef = useRef(null);
 
   useIntersectionObservers([
@@ -25,8 +25,8 @@ const Home = () => {
     aboutRef,
     stacksRef,
     featuredRef,
-    projectsRef,
-    recomendationRef,
+    // projectsRef,
+    // recomendationRef,
     contactRef,
   ]);
 
