@@ -20,8 +20,8 @@ const projects = [
     description: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     links: {
-      github: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',
-      live: 'https://github.com/aletanus/m5-bandkamp-generic-view-aletanus',
+      github: 'https://github.com/aletanus/m5-bandkamp-generic-view-aletanus',
+      live: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',
     },
   },
   {
