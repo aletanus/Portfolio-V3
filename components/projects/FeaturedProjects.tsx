@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React, { useRef } from "react";
 import Section from "../main/Section";
 import projects from "../../db/projects";
@@ -10,6 +11,9 @@ interface FeaturedProjectsProps {
 }
 
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ featuredRef }) => {
+  
+  const { t } = useTranslation();
+  
   const headerRef = useRef(null);
   const [spring, api] = useSpring(() => ({
     from: {
@@ -30,7 +34,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ featuredRef }) => {
   return (
     <Section label="featured" sectionRef={featuredRef}>
       <a.header ref={headerRef} style={spring}>
-        <h2>Featured Projects</h2>
+        <h2>{t("Featured Projects")}</h2>
       </a.header>
       <div className="featuredProjects">
         {projects.slice(0, 5).map((projectProp) => (

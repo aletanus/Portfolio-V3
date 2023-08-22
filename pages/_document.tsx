@@ -7,12 +7,12 @@ export default function Document() {
       <Head>
         <Script id="light-dark-enabler" strategy="beforeInteractive">
           {`
-            const webConfig = JSON.parse(localStorage.getItem('alessandro-tanus-web-config') || '{}');
+            const webConfig = JSON.parse(localStorage.getItem('alta-portfolio-web-config') || '{}');
             const root = document.querySelector(':root');
             
             if (webConfig.darkMode === undefined) {
               webConfig.darkMode = true;
-              localStorage.setItem('alessandro-tanus-web-config', JSON.stringify(webConfig));
+              localStorage.setItem('alta-portfolio-web-config', JSON.stringify(webConfig));
             }
 
             if (webConfig.darkMode) {

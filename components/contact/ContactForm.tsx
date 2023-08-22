@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import axios, { AxiosError } from "axios";
 import React, { useRef, useState } from "react";
 import { emailVerificationKey, formSubmissionKey } from "../../config/apiKeys";
@@ -12,6 +13,9 @@ import {
 } from "../../utils/formHelper";
 
 const ContactForm = () => {
+
+  const { t } = useTranslation();
+
   const formRef = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -221,7 +225,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="contactForm__name">
-            Name{" "}
+            {t("Name")}{" "}
             <span aria-hidden className={nameError ? "error" : ""}>
               *
             </span>
@@ -231,7 +235,7 @@ const ContactForm = () => {
             id="contactForm__name"
             className={`contactForm__name ${nameError ? "invalid" : ""}`}
             value={name}
-            placeholder="Full Name"
+            placeholder={t("Full Name")}
             onChange={(e) => {
               setName(e.target.value);
             }}
@@ -240,7 +244,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="contactForm__email">
-            Email{" "}
+            E-mail{" "}
             <span aria-hidden className={emailError ? "error" : ""}>
               *
             </span>
@@ -250,7 +254,7 @@ const ContactForm = () => {
             id="contactForm__email"
             className={`contactForm__email ${emailError ? "invalid" : ""}`}
             value={email}
-            placeholder="Email address"
+            placeholder={t("E-mail address")}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -259,7 +263,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="contactForm__message">
-            Message{" "}
+            {t("Message")}{" "}
             <span aria-hidden className={messageError ? "error" : ""}>
               *
             </span>
@@ -269,14 +273,14 @@ const ContactForm = () => {
             className={`contactForm__message ${messageError ? "invalid" : ""}`}
             rows={5}
             value={message}
-            placeholder="Type your message here..."
+            placeholder={t("Type your message here...")}
             onChange={(e) => {
               setMessage(e.target.value);
             }}
           />
         </div>
         <button type="submit" disabled={processing}>
-          Send
+          {t("Send")}
           {processing ? (
             <ThreeDots
               height="15"

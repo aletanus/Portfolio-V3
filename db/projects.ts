@@ -5,7 +5,7 @@ const projects = [
     note: 'K-Books: A physical and digital books library management system.',
     image: '/projects/K.Books.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'K-Books: A comprehensive management system for both physical and digital libraries. Through K-Books, it is also possible to provide readers with digital versions of books and other documents in PDF format.',
+    description: 'K-Books is a system designed to efficiently manage both physical and digital libraries. Through K-Books, it\'s also possible to provide readers access to digital editions of books and various documents in PDF format, enhancing the library experience.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     links: {
       github: 'https://github.com/aletanus/k-books',
@@ -14,10 +14,10 @@ const projects = [
   },
   {
     title: 'BandKamp',
-    note: 'BandKamp is a comprehensive system designed for managing users, albums, and songs. It provides users with the ability to log in, create, update, and delete their personal albums and songs.',
+    note: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
     image: '/projects/BandKamp.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'BandKamp is a comprehensive system designed for managing users, albums, and songs. It provides users with the ability to log in, create, update, and delete their personal albums and songs.',
+    description: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     links: {
       github: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',
@@ -29,7 +29,7 @@ const projects = [
     note: 'The future of Pokémon begins in the PokeVerse',
     image: '/projects/PokeVerso.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'The future of Pokémon begins in the PokeVerse. \<br>\ A platform for immersive experience in the Pokémon universe.',
+    description: 'The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.',
     stack: ['Next.js', 'TypeScript', 'TailWind'],
     links: {
       github: 'https://github.com/aletanus/pokeverse',
@@ -41,7 +41,7 @@ const projects = [
     note: 'K.Hub - A Skills Tracking Tool.',
     image: '/projects/K.Hub.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'K.Hub enables developers to register the technologies they\'re proficient in or learning, helping them monitor their progress and proficiency levels in each one.'
+    description: 'K.Hub is a web application that enables developers to register the technologies in which they have expertise or are learning, assisting them in tracking their progress and proficiency levels within each registered technology.'
     ,
     stack: ['React.js', 'TypeScript', 'React-Hook-Form', 'Material-UI'],
     links: {
@@ -54,7 +54,7 @@ const projects = [
     note: 'Online burger ordering platform.',
     image: '/projects/Burguer Shop-V2.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'Version II - Among other added features, this second version of the Online Burger platform includes customer registration and an exclusive session for each individual client.',
+    description: 'This second version of the Burger Shop application not only encompasses the foundational Front End system for product presentation, selection, addition, and order calculation within the shopping cart but also includes customer registration and an exclusive session for each client.',
     stack: ['React.js', 'TypeScript', 'React-Hook-Form'],
     links: {
       github: 'https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-hamburgueria-v2-aletanus',

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from "react";
 import Section from "../main/Section";
 import { a, useTrail } from "@react-spring/web";
@@ -8,6 +9,9 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ aboutRef }) => {
+
+  const { t } = useTranslation();
+
   const [springs, api] = useTrail(2, () => ({
     from: {
       y: 50,
@@ -29,50 +33,36 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
   return (
     <Section label="about" sectionRef={aboutRef}>
       <a.header style={springs[0]}>
-        <h2>About Me</h2>
+        <h2>{t("About Me")}</h2>
       </a.header>
       <a.div className="about__container" style={springs[1]}>
         <article className="about__content">
           <p>
-            Hello! My name is <b>Alesandro Tanus</b> and I&apos;m a 
-            Computer Science Student, Full Stack Developer and Bachelor 
-            in Product Design with extensive experience in project development.
-            I thoroughly enjoy working as a <b>Full Stack Developer</b>, 
-            yet I find myself equally at ease focusing on either 
-            the front end or the back end whenever the need arises.
+            {t("Hello! My name is")} <b>Alesandro Tanus</b> {t("and I'm a Computer Science Student, Full Stack Developer and Bachelor in Product Design. I thoroughly enjoy working as a ")}<b>{t("Full Stack Developer")}</b>{t(", yet I find myself equally at ease working on just one of the stacks, either as a Front-End Developer or as a Back-End Developer.")}
           </p>
 
           <p>
-          <b>When it comes to the Front End</b> : I have a genuine passion 
-          for crafting appealing applications that also deliver a 
-          seamless User Experience.<br/>
+          <b>{t("In the realm of Front End development")}</b>{t(" : I have a genuine passion for crafting appealing applications that also prioritize usability and User Experience.")}<br/>
           </p>
 
           <p>
-          <b>As for the Back End</b>, being a foundational element in the overall 
-          development process, I am captivated by the challenge of building, 
-          expanding, and maintaining robust, clear, and integrated server-side
-          applications.
+          <b>{t("As for the Back End")}</b>{t(", being a foundational element in the overall development process, I am captivated by the responsibility of building, expanding, and maintaining robust, clear, and integrated server-sideapplications.")}
           </p>
 
           <p>
-          <b>As a Designer</b>, I have accumulated over 10 years of professional 
-          experience, directly responsible for designing, managing, and executing 
-          dozens of projects for individuals, businesses, and companies.
+          <b>{t("As a Designer")}</b>{t(", I have accumulated over 10 years of professional experience, directly responsible for designing, managing, and executing numerous projects for individuals, businesses, and companies.")}
           </p>
 
           <p>
-            <b>My main aim is to create and deliver unique, high-end and innovative
-            products for a variety of clients. If you are in need of an
-            experienced Software Engineer, I am</b>{" "}
+            <b>{t("My main aim is to create and deliver high-end and innovative products for a variety of clients. If you are in need of an Software Developer, I am")}</b>{" "}
             <a href="mailto:alessandro.tanus@gmail.com?subject=Hire%20Alessandro%20Tanus!">
-              available for hire.
+              {t("available for hire.")}
             </a>
           </p>
 
           <span className="extra-info">
-            HAVE A GOOD APPLICATION OR WEBSITE YOU&apos;D LIKE TO DISCUSS? I&apos;D LOVE TO{" "}
-            <a href="#contact">HEAR ABOUT IT</a>
+            {t("ARE YOU SEEKING TO EXPAND YOUR DEVELOPMENT TEAM OR HAVE A PROJECT YOU'D LIKE TO DISCUSS, I'D LOVE TO ")}{" "}
+            <a href="#contact">{t("HEAR ABOUT IT")}</a>
           </span>
         </article>
       </a.div>
