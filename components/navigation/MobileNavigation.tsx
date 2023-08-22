@@ -1,13 +1,29 @@
+import { useTranslation } from "react-i18next";
 import { useTrail, animated } from "@react-spring/web";
 import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import socialLinks from "../../db/social_links";
 import { storeType } from "../../redux/configureStore";
 import toggleDarkMode from "../../utils/darkModeHelper";
 import Logo from "./Logo";
+import FlagsSelect from "react-flags-select";
+import { changeLanguage } from '../../redux/slices/translation_slice';
 
 const MobileNavigation = () => {
+  
+  const { t, i18n } = useTranslation();
+  const selectedLanguage = useSelector((state: storeType) => state.translation.selectedLanguage);
+  const dispatch = useDispatch();
+  const toggleLanguage = () => {
+    const newLanguage = selectedLanguage === "en" ? "pt" : "en";
+    dispatch(changeLanguage(newLanguage));
+  };
+  useEffect(() => {
+    i18n.changeLanguage(selectedLanguage);
+  }, [selectedLanguage, i18n]);
+
+
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
   const [isActive, setIsActive] = useState<boolean>(false);
   const [sticky, setSticky] = useState<boolean>(false);
@@ -43,7 +59,7 @@ const MobileNavigation = () => {
 
   useEffect(() => {
     setDarkMode(
-      !!JSON.parse(localStorage?.getItem("alessandro-tanus-web-config") || "{}")
+      !!JSON.parse(localStorage?.getItem("alta-portfolio-web-config") || "{}")
         ?.darkMode
     );
     const observer = new IntersectionObserver(
@@ -61,11 +77,26 @@ const MobileNavigation = () => {
     };
   }, []);
 
+  const curriculmVitae = i18n.language === "en" ? "/assets/Curriculum Vitae - Alessandro Tanus_English.pdf" : "/assets/Curriculum Vitae - Alessandro Tanus_Portugês.pdf";
+  const handleDownloadClick = () => {
+    window.open(`${curriculmVitae}`, "_blank");
+  };
+
   return (
     <header className={sticky ? "header sticky" : "header"} ref={headerRef}>
       <nav className="m_navigation" aria-label="Navigation">
         <div className="logo"><Logo /></div>
-        <DarkModeSwitch
+          <FlagsSelect
+            aria-label="Select Country - Translation"
+            className="flagsSelect"
+            selectButtonClassName="flagSelect"
+            selected={selectedLanguage === "en" ? "US" : "BR"}
+            onSelect={toggleLanguage}
+            countries={["US", "BR"]}
+            customLabels={{"US": { primary: "EN"}, "BR": { primary: "PT"} }}
+            showSelectedLabel={false}
+          />
+          <DarkModeSwitch
           checked={isDarkMode}
           onChange={(checked) => {
             toggleDarkMode(setDarkMode, checked);
@@ -100,26 +131,26 @@ const MobileNavigation = () => {
           }
           </li>
           <li>
-            <a href="#content" className={sectionActiveFor(['hero'])} onClick={handleNavToggle}>Home</a>
+            <a href="#content" className={sectionActiveFor(['hero'])} onClick={handleNavToggle}>{t("Home")}</a>
           </li>
           <li>
-            <a href="#about" className={sectionActiveFor(['about'])} onClick={handleNavToggle}>About</a>
+            <a href="#about" className={sectionActiveFor(['about'])} onClick={handleNavToggle}>{t("About")}</a>
           </li>
           <li>
-            <a href="#stacks" className={sectionActiveFor(['stacks'])} onClick={handleNavToggle}>Stacks</a>
+            <a href="#stacks" className={sectionActiveFor(['stacks'])} onClick={handleNavToggle}>{t("Stacks")}</a>
           </li>
           <li>
-            <a href="#featured" className={sectionActiveFor(['featured'])} onClick={handleNavToggle}>Projects</a>
+            <a href="#featured" className={sectionActiveFor(['featured'])} onClick={handleNavToggle}>{t("Projects")}</a>
           </li>
           {/* <li>
             <a href="#testimonials" className={sectionActiveFor(['testimonials'])} onClick={handleNavToggle}>Testimonials</a>
           </li> */}
           <li>
-            <a href="#contact" className={sectionActiveFor(['contact'])} onClick={handleNavToggle}>Contact</a>
+            <a href="#contact" className={sectionActiveFor(['contact'])} onClick={handleNavToggle}>{t("Contact")}</a>
           </li>
           <li className="navigation__linkResume">
-            <a href="/assets/Curriculum Vitae - Alessandro Tanus.pdf" rel="noreferrer noopener" download target={'_blank'}>
-              <button onClick={() => window.open('/assets/Curriculum Vitae - Alessandro Tanus.pdf', '_blank')}  tabIndex={-1}>Resume</button>
+            <a href={curriculmVitae} rel="noreferrer noopener" download target={'_blank'}>
+              <button onClick={handleDownloadClick}  tabIndex={-1}>{t("Resume")}</button>
             </a>
           </li>
         </ul>

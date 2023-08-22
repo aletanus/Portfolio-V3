@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React, { useEffect } from "react";
 import Section from "../main/Section";
 import { useTrail, a, config } from "@react-spring/web";
@@ -9,6 +10,9 @@ interface heroProps {
 }
 
 const Hero: React.FC<heroProps> = ({ heroRef }) => {
+
+  const { t } = useTranslation();
+
   const [springs, api] = useTrail(4, () => ({
     from: {
       y: 50,
@@ -45,16 +49,14 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
             priority={true}
           />
         </a.div>
-        <a.h1 style={springs[1]}>Hi, my name is</a.h1>
+        <a.h1 style={springs[1]}>{t("Hi, my name is")}</a.h1>
         <a.h2 style={springs[1]}>Alessandro Tanus.</a.h2>
         <a.p style={springs[2]}>
-          I can help you build a product, feature, or website. Look through some of
-          my work and experience. Whether you&apos;re seeking to expand your development team or have a 
-          project you&apos;d like to discuss, <b>if you like what you see, feel free to contact me.
-          I am available for hire</b>.
+          {t("I can help you build a system, feature, or website. Look through some of my work and experience. Whether you're seeking to expand your development team or have a project you'd like to discuss, ")}
+          <b>{t("if you like what you see, feel free to contact me. I am available for hire.")}</b>
         </a.p>
         <a.a href="#featured" style={springs[3]}>
-          <button tabIndex={-1}>Check out my work!</button>
+          <button tabIndex={-1}>{t("Check out my work")}</button>
         </a.a>
       </div>
       <canvas className="canvas" id="canvas"></canvas>

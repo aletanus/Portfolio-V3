@@ -19,6 +19,15 @@
       transform: translateY(-10px);
     }
   }
+
+  .flagsSelect {
+    padding-bottom: 0;
+    margin-right: 1rem;
+
+    button > span {
+      margin: 1px 0;
+    }
+  }
 }
 
 .m_navigation__toggle {

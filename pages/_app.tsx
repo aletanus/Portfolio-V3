@@ -1,3 +1,4 @@
+import "../libraries/i18next"
 import '../styles/scss/index.scss'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux';

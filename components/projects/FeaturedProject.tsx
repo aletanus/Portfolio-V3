@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
@@ -6,6 +7,9 @@ import { a, useSpring } from "@react-spring/web";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const FeaturedProject: React.FC<projectType> = (props) => {
+
+  const { t } = useTranslation();
+
   const contentRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef(null);
 
@@ -48,8 +52,8 @@ const FeaturedProject: React.FC<projectType> = (props) => {
   return (
     <a.article className="featuredProject__container" ref={containerRef} style={spring}>
       <div className="featuredProject__content" ref={contentRef}>
-        <h3>{props.title}</h3>
-        <p onMouseMove={handleMouseMove} dangerouslySetInnerHTML={{__html: props.description}} />
+        <h3>{t(props.title)}</h3>
+        <p onMouseMove={handleMouseMove} dangerouslySetInnerHTML={{__html: t(props.description)}} />
         <ul className="featuredProject__techStack">
           {props.stack.map((item) => (
             <li key={item}>{item}</li>
@@ -64,7 +68,7 @@ const FeaturedProject: React.FC<projectType> = (props) => {
           >
             <FiGithub />
           </a>
-          <a href={props.links.live} target="_blank" rel="noreferrer noopener" title={`${props.title}'s live link`}>
+          <a href={props.links.live} target="_blank" rel="noreferrer noopener" title={`${t(props.title)}'s live link`}>
             <FiExternalLink />
           </a>
         </div>

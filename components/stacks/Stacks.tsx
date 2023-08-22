@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React, { useRef } from "react";
 import Section from "../main/Section";
 import { a, useSpring } from "@react-spring/web";
@@ -9,6 +10,9 @@ interface StacksRef {
 }
 
 const Stacks: React.FC<StacksRef> = ({ stacksRef }) => {
+
+  const { t } = useTranslation();
+
   const headerRef = useRef(null);
   const [springs, api] = useSpring(() => ({
     from: {
@@ -29,7 +33,7 @@ const Stacks: React.FC<StacksRef> = ({ stacksRef }) => {
   return (
     <Section label="stacks" sectionRef={stacksRef}>
       <a.header ref={headerRef} style={springs}>
-        <h2>Stacks</h2>
+        <h2>{t("Stacks")}</h2>
       </a.header>
       <StacksGrid />
     </Section>

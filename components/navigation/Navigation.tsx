@@ -1,22 +1,34 @@
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { storeType } from "../../redux/configureStore";
 import toggleDarkMode from "../../utils/darkModeHelper";
 import Logo from "./Logo";
 import { a, useTrail } from "@react-spring/web";
 import Link from "next/link";
+import FlagsSelect from "react-flags-select";
+import { changeLanguage } from "../../redux/slices/translation_slice";
 
 const Navigation = () => {
+
+  const { t, i18n } = useTranslation();
+  const selectedLanguage = useSelector((state: storeType) => state.translation.selectedLanguage);
+  const dispatch = useDispatch();
+  const toggleLanguage = () => {
+    const newLanguage = selectedLanguage === "en" ? "pt" : "en";
+    dispatch(changeLanguage(newLanguage));
+  };
+  useEffect(() => {
+    i18n.changeLanguage(selectedLanguage);
+  }, [selectedLanguage, i18n]);
+
   const [sticky, setSticky] = useState<boolean>(false);
   const headerRef = useRef(null);
 
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
-  const currentSection = useSelector(
-    (store: storeType) => store.currentSection
-  );
-  const sectionActiveFor = (arr: any[]) =>
-    arr.includes(currentSection.name) ? "active" : "";
+  const currentSection = useSelector((store: storeType) => store.currentSection);
+  const sectionActiveFor = (arr: any[]) => arr.includes(currentSection.name) ? "active" : "";
 
   const [springs, api] = useTrail(6, () => ({
     from: {
@@ -31,7 +43,7 @@ const Navigation = () => {
 
   useEffect(() => {
     setDarkMode(
-      !!JSON.parse(localStorage?.getItem("alessandro-tanus-web-config") || "{}")
+      !!JSON.parse(localStorage?.getItem("alta-portfolio-web-config") || "{}")
         ?.darkMode
     );
 
@@ -56,6 +68,11 @@ const Navigation = () => {
     };
   }, []);
 
+  const curriculmVitae = i18n.language === "en" ? "/assets/Curriculum Vitae - Alessandro Tanus_English.pdf" : "/assets/Curriculum Vitae - Alessandro Tanus_Portugês.pdf";
+  const handleDownloadClick = () => {
+    window.open(`${curriculmVitae}`, "_blank");
+  };
+
   return (
     <header ref={headerRef} className={sticky ? "header sticky" : "header"}>
       <nav className="navigation" aria-label="Navigation">
@@ -69,7 +86,7 @@ const Navigation = () => {
               className={sectionActiveFor(["hero"])}
               scroll={false}
             >
-              Home
+              {t('Home')}
             </Link>
           </a.li>
           <a.li style={springs[1]}>
@@ -78,7 +95,7 @@ const Navigation = () => {
               className={sectionActiveFor(["about"])}
               scroll={false}
             >
-              About
+              {t('About')}
             </Link>
           </a.li>
           <a.li style={springs[2]}>
@@ -87,7 +104,7 @@ const Navigation = () => {
               className={sectionActiveFor(["stacks"])}
               scroll={false}
             >
-              Stacks
+              {t('Stacks')}
             </Link>
           </a.li>
           <a.li style={springs[2]}>
@@ -96,7 +113,7 @@ const Navigation = () => {
               className={sectionActiveFor(["featured"])}
               scroll={false}
             >
-              Projects
+              {t('Projects')}
             </Link>
           </a.li>
           {/* <a.li style={springs[3]}>
@@ -114,19 +131,31 @@ const Navigation = () => {
               className={sectionActiveFor(["contact"])}
               scroll={false}
             >
-              Contact
+              {t('Contact')}
             </Link>
           </a.li>
           <a.li className="navigation__linkResume" style={springs[5]}>
             <Link
-              href="/assets/Curriculum Vitae - Alessandro Tanus.pdf"
+              href={curriculmVitae}
               rel="noreferrer noopener"
               target={"_blank"}
               download
             >
-              <button onClick={() => window.open('/assets/Curriculum Vitae - Alessandro Tanus.pdf', '_blank')}  tabIndex={-1}>Resume</button>
+              <button onClick={handleDownloadClick}  tabIndex={-1}>{t('Resume')}</button>
             </Link>
           </a.li>
+          <li>
+            <FlagsSelect
+              aria-label="Select Country - Translation"
+              className="flagsSelect"
+              selectButtonClassName="flagSelect"
+              selected={selectedLanguage === "en" ? "US" : "BR"}
+              onSelect={toggleLanguage}
+              countries={["US", "BR"]}
+              customLabels={{"US": { primary: "EN"}, "BR": { primary: "PT"} }}
+              showSelectedLabel={false}
+            />
+          </li>
           <li aria-label="Toggle dark mode">
             <DarkModeSwitch
               checked={isDarkMode}
