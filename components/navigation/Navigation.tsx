@@ -25,6 +25,7 @@ const Navigation = () => {
 
   const [sticky, setSticky] = useState<boolean>(false);
   const headerRef = useRef(null);
+  const prevScrollY = useRef(0);
 
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
   const currentSection = useSelector((store: storeType) => store.currentSection);
@@ -52,22 +53,24 @@ const Navigation = () => {
       y: 0,
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        setSticky(entry.intersectionRatio < 1);
-      },
-      { threshold: 1 }
-    );
-
-    if (headerRef.current) observer.observe(headerRef.current);
-
-    return function () {
-      if (headerRef.current) observer.unobserve(headerRef.current);
-      api.stop();
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > prevScrollY.current && scrollY > 200) {
+        setSticky(false);
+      } else {
+        setSticky(true);
+      }
+      prevScrollY.current = scrollY
     };
-  }, []);
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
+ 
   const curriculmVitae = i18n.language === "en" ? "/assets/Curriculum Vitae - Alessandro Tanus_English.pdf" : "/assets/Curriculum Vitae - Alessandro Tanus_Portugês.pdf";
   const handleDownloadClick = () => {
     window.open(`${curriculmVitae}`, "_blank");
@@ -107,7 +110,7 @@ const Navigation = () => {
               {t('Stacks')}
             </Link>
           </a.li>
-          <a.li style={springs[2]}>
+          <a.li style={springs[3]}>
             <Link
               href="#featured"
               className={sectionActiveFor(["featured"])}

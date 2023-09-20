@@ -25,18 +25,6 @@ const projects = [
     },
   },
   {
-    title: 'PokéVerse',
-    note: 'The future of Pokémon begins in the PokeVerse',
-    image: '/projects/PokeVerso.webp',
-    imgDims: { width: '2496 ', height: '1427' },
-    description: 'The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.',
-    stack: ['Next.js', 'TypeScript', 'TailWind'],
-    links: {
-      github: 'https://github.com/aletanus/pokeverse',
-      live: 'https://pokeverso.vercel.app/',
-    },
-  },
-  {
     title: 'K.Hub',
     note: 'K.Hub - A Skills Tracking Tool.',
     image: '/projects/K.Hub.webp',
@@ -47,6 +35,18 @@ const projects = [
     links: {
       github: 'https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-kenzie-hub-aletanus',
       live: 'https://react-entrega-kenzie-hub-aletanus-aletanus.vercel.app/',
+    },
+  },
+  {
+    title: 'PokéVerse',
+    note: 'The future of Pokémon begins in the PokeVerse',
+    image: '/projects/PokeVerso.webp',
+    imgDims: { width: '2496 ', height: '1427' },
+    description: 'The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.',
+    stack: ['Next.js', 'TypeScript', 'TailWind'],
+    links: {
+      github: 'https://github.com/aletanus/pokeverse',
+      live: 'https://pokeverso.vercel.app/',
     },
   },
   {
