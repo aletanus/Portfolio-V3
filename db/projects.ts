@@ -37,18 +37,18 @@ const projects = [
       live: 'https://react-entrega-kenzie-hub-aletanus-aletanus.vercel.app/',
     },
   },
-  {
-    title: 'PokéVerse',
-    note: 'The future of Pokémon begins in the PokeVerse',
-    image: '/projects/PokeVerso.webp',
-    imgDims: { width: '2496 ', height: '1427' },
-    description: 'The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.',
-    stack: ['Next.js', 'TypeScript', 'TailWind'],
-    links: {
-      github: 'https://github.com/aletanus/pokeverse',
-      live: 'https://pokeverso.vercel.app/',
-    },
-  },
+  // {
+  //   title: 'PokéVerse',
+  //   note: 'The future of Pokémon begins in the PokeVerse',
+  //   image: '/projects/PokeVerso.webp',
+  //   imgDims: { width: '2496 ', height: '1427' },
+  //   description: 'The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.',
+  //   stack: ['Next.js', 'TypeScript', 'TailWind'],
+  //   links: {
+  //     github: 'https://github.com/aletanus/pokeverse',
+  //     live: 'https://pokeverso.vercel.app/',
+  //   },
+  // },
   {
     title: 'Burger Shop - V2',
     note: 'Online burger ordering platform.',
@@ -61,18 +61,18 @@ const projects = [
       live: 'https://react-entrega-hamburgueria-v2-aletanus.vercel.app/',
     },
   },
-  {
-    title: 'Burger Shop - V1',
-    note: 'Online burger ordering platform.',
-    image: '/projects/Burguer Shop-V1.webp',
-    imgDims: { width: '2496 ', height: '1427' },
-    description: 'Version I - The objective of this work was to build an application in React.js as well as perfecting stylization, componentization and responsiveness skills.',
-    stack: ['React.js', 'Styled-Components'],
-    links: {
-      github: 'https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-hamburgueria-da-kenzie-aletanus',
-      live: 'https://hamburgueria-da-kenzie-aletanus.vercel.app/',
-    },
-  },
+  // {
+  //   title: 'Burger Shop - V1',
+  //   note: 'Online burger ordering platform.',
+  //   image: '/projects/Burguer Shop-V1.webp',
+  //   imgDims: { width: '2496 ', height: '1427' },
+  //   description: 'Version I - The objective of this work was to build an application in React.js as well as perfecting stylization, componentization and responsiveness skills.',
+  //   stack: ['React.js', 'Styled-Components'],
+  //   links: {
+  //     github: 'https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-hamburgueria-da-kenzie-aletanus',
+  //     live: 'https://hamburgueria-da-kenzie-aletanus.vercel.app/',
+  //   },
+  // },
 ];
 
 export type projectType = typeof projects[0];
