@@ -60,14 +60,19 @@ const FeaturedProject: React.FC<projectType> = (props) => {
           ))}
         </ul>
         <div className="featuredProject__links">
-          <a
-            href={props.links.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            title={`${props.title}'s source code (github)`}
-          >
-            <FiGithub />
-          </a>
+          {
+            props.links.github ?
+              <a
+              href={props.links.github}
+              target="_blank"
+              rel="noreferrer noopener"
+              title={`${props.title}'s source code (github)`}
+              >
+                <FiGithub />
+              </a>
+            :
+              null
+          }
           <a href={props.links.live} target="_blank" rel="noreferrer noopener" title={`${t(props.title)}'s live link`}>
             <FiExternalLink />
           </a>
