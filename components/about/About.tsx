@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
       <a.div className="about__container" style={springs[1]}>
         <article className="about__content">
           <p>
-            {t("Hello! My name is")} <b>Alesandro Tanus</b>{t(", I'm a Computer Science Student, Full Stack Developer and Bachelor in Product Design. I thoroughly enjoy working as a ")}<b>{t("Full Stack Developer")}</b>{t(", yet I find myself equally at ease working on just one of the stacks, either as a Front-End Developer or as a Back-End Developer.")}
+            {t("Hello! My name is")} <b>Alesandro Tanus</b>{t(", I'm a Full Stack Developer, Computer Science Student and Bachelor in Product Design. I thoroughly enjoy working as a ")}<b>{t("Full Stack Developer")}</b>{t(", yet I find myself equally at ease working on just one of the stacks, either as a Front-End Developer or as a Back-End Developer.")}
           </p>
 
           <p>
