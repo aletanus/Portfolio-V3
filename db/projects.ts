@@ -6,7 +6,7 @@ const projects = [
     image: '/projects/FlexFuture.webp',
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Flex Future is a Brazilian platform for the consultation and registration of companies. Through Flex Future, it is possible to search for companies and discover information about their work models (hybrid, remote, in-person), location, size, sector, and much more.',
-    stack: ['PostgreSQL', 'TypeScript', 'Prisma', 'Nest', 'Next'],
+    stack: ['PostgreSQL', 'Prisma', 'Nest', 'Next'],
     links: {
       // github: 'https://github.com/aletanus/k-books',
       live: 'https://www.flexfuture.com.br/',
