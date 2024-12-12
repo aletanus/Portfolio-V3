@@ -9,7 +9,7 @@ const projects = [
     stack: ['PostgreSQL', 'Prisma', 'Nest', 'Next'],
     links: {
       // github: 'https://github.com/aletanus/k-books',
-      live: 'https://www.flexfuture.com.br/',
+      live: 'https://flexfuture.vercel.app/',
     },
   },
   {

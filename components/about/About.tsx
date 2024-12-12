@@ -33,37 +33,63 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
   return (
     <Section label="about" sectionRef={aboutRef}>
       <a.header style={springs[0]}>
-        <h2>{t("About Me")}</h2>
+        <h2 className='b-blue'>{t("About Me")}</h2>
       </a.header>
       <a.div className="about__container" style={springs[1]}>
         <article className="about__content">
+          
           <p>
-            {t("Hello! My name is")} <b>Alesandro Tanus</b>{t(", I'm a Full Stack Developer, Computer Science Student and Bachelor in Product Design. I thoroughly enjoy working as a ")}<b>{t("Full Stack Developer")}</b>{t(", yet I find myself equally at ease working on just one of the stacks, either as a Front-End Developer or as a Back-End Developer.")}
+            <b> {t("My name is")} Alesandro Tanus</b><b>{t(", I'm a Full Stack Developer, Computer Science Student and Bachelor in Product Design.")}</b>
           </p>
 
-          <p>
-          <b>{t("In the realm of Front End development")}</b>{t(" : I have a genuine passion for crafting appealing applications that also prioritize usability and User Experience.")}<br/>
-          </p>
+          <br />
 
           <p>
-          <b>{t("As for the Back End")}</b>{t(", being a foundational element in the overall development process, I am captivated by the responsibility of building, expanding, and maintaining robust, clear, and integrated server-sideapplications.")}
+            <b className='b-blue'>{t("As a Developer:")}</b>
+            {t(" My goal is to develop robust, efficient, and scalable systems and applications for both web and mobile platforms. I place technical efficiency at the core of my work, ensuring the final product meets business demands with quality and reliability.")}
+            <br/>
+
+            <b className='b-blue'>{t(" • Mobile:")}</b>
+            {t(" Development of optimized applications for Android and iOS, with a focus on performance and compatibility.")}
+
+            <br/>
+            <b className='b-blue'>{t(" • Front-end:")}</b>
+            {t(" Creation of responsive and functional interfaces tailored to user needs.")}
+
+            <br/>
+            <b className='b-blue'>{t(" • Back-end:")}</b>
+            {t(" Building solid APIs and infrastructure to ensure performance and security.")}
           </p>
 
-          <p>
-          <b>{t("As a Designer")}</b>{t(", I have accumulated over 10 years of professional experience, directly responsible for designing, managing, and executing numerous projects for individuals, businesses, and companies.")}
-          </p>
+          <br />
+    
 
           <p>
-            <b>{t("My main aim is to create and deliver high-end and innovative products for a variety of clients. If you are in need of an Software Developer, I am")}</b>{" "}
-            <a href="mailto:alessandro.tanus@gmail.com?subject=Hire%20Alessandro%20Tanus!">
-              {t("available for hire.")}
+            <b className='b-blue'>{t("As a Designer:")}</b>            
+            {t(" My mission is to craft engaging digital experiences aligned with both user and business needs. I transform concepts into captivating experiences by putting the user and the message at the center of every decision.")}
+            <br/>
+
+            <b className='b-blue'>{t(" • UI/UX:")}</b>
+            {t(" Designing intuitive interfaces that prioritize usability and aesthetics.")}
+
+            <br/>
+            <b className='b-blue'>{t(" • Products:")}</b>
+            {t(" Strategizing and developing digital solutions that connect technology with purpose.")}
+
+            <br/>
+            <b className='b-blue'>{t(" • Branding:")}</b>
+            {t(" Enhancing visual identity to create memorable and coherent brands.")}
+          </p>
+
+          <br />
+
+          <p>
+            <b className='b-blue-black'>{t("Are you looking to expand your development team or need a professional to build a system, app, or interface?")}</b>{" "}
+            <a href="#contact">
+              {t("I am available to assist you.")}
             </a>
           </p>
 
-          <span className="extra-info">
-            {t("ARE YOU SEEKING TO EXPAND YOUR DEVELOPMENT TEAM OR HAVE A PROJECT YOU'D LIKE TO DISCUSS, I'D LOVE TO ")}{" "}
-            <a href="#contact">{t("HEAR ABOUT IT")}</a>
-          </span>
         </article>
       </a.div>
     </Section>

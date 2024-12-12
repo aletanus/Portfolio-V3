@@ -1,4 +1,6 @@
 :root {
+  --b-blue: #0070f3;
+  --b-blue-black: #2b353f;
   --theme: rgb(175, 212, 242);
   --theme-light-0: rgb(253, 255, 255);
   --theme-light: rgb(223, 239, 255);
@@ -27,6 +29,8 @@
 }
 
 :root.dark {
+  --b-blue: rgb(0, 173, 231);
+  --b-blue-black: rgb(0, 173, 231);
   --theme: rgb(4, 15, 22);
   --theme-light-0: rgb(11, 32, 43);
   --theme-light: rgb(11, 32, 43);
@@ -49,6 +53,8 @@
   --h2-background: rgb(253, 255, 255);
 }
 
+$b-blue: var(--b-blue);
+$b-blue-black: var(--b-blue-black);
 $theme: var(--theme);
 $theme-light-0: var(--theme-light-0);
 $theme-light: var(--theme-light);

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Section from "../main/Section";
-import { useTrail, a, config } from "@react-spring/web";
+import { useTrail, a } from "@react-spring/web";
 import Image from "next/image";
 import { renderCanvas } from './renderCanvas';
 
@@ -12,6 +12,8 @@ interface heroProps {
 const Hero: React.FC<heroProps> = ({ heroRef }) => {
 
   const { t } = useTranslation();
+
+  const [isTabletOrLarger, setIsTabletOrLarger] = useState(false);
 
   const [springs, api] = useTrail(4, () => ({
     from: {
@@ -25,6 +27,15 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
   }));
 
   useEffect(() => {
+    const updateScreenSize = () => {
+      setIsTabletOrLarger(window.innerWidth >= 768);
+    };
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       api.start({
         y: 0,
@@ -34,8 +45,10 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
   }, []);
 
   useEffect(() => {
-    renderCanvas();
-  }, []);
+    if (isTabletOrLarger) {
+      renderCanvas();
+    }
+  }, [isTabletOrLarger]);
 
   return (
     <Section label="hero" id="content" sectionRef={heroRef}>
@@ -52,14 +65,29 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
         <a.h1 style={springs[1]}>{t("Hi, my name is")}</a.h1>
         <a.h2 style={springs[1]}>Alessandro Tanus.</a.h2>
         <a.p style={springs[2]}>
-          {t("I can help you build a system, feature, or website. Look through some of my work and experience. Whether you're seeking to expand your development team or have a project you'd like to discuss, ")}
-          <b>{t("if you like what you see, feel free to contact me. I am available for hire.")}</b>
+          <b>{t("I am a ")}</b>
+          <b className='b-blue'>{t("Developer ")}</b>
+          <b>{t("and ")}</b>
+          <b className='b-blue'>{t("Designer")}</b>
+          <b>{t(".")}</b>
+          <br/>
+          <br/>
+          <b> • </b>
+          {t("As a Developer (Front-end | Back-end), I develop web and mobile applications with a focus on efficiency, scalability, and technical robustness.")}
+          <br/>
+          <br/>
+          <b> • </b>
+          {t("As a Designer (Products | UI | UX | Branding), I plan, create, and deliver digital projects that effectively align with business objectives, balancing aesthetics, functionality, and a high-quality user experience.")}
+          <br/>
+          <br/>
+          <b className='b-blue-black'>{t("Do you need a professional to develop a system, app, or interface? ")}</b>
+          <b className='b-blue-black'>{t("I am available to assist you.")}</b>
         </a.p>
         <a.a href="#featured" style={springs[3]}>
           <button tabIndex={-1}>{t("Check out my work")}</button>
         </a.a>
       </div>
-      <canvas className="canvas" id="canvas"></canvas>
+      {isTabletOrLarger && <canvas className="canvas" id="canvas"></canvas>}
     </Section>
   );
 };

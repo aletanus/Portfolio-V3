@@ -19,6 +19,15 @@ section {
     color: $text;
   }
 
+  .b-blue {
+    // color: var(--accent-light),
+    color: $b-blue;
+  }
+
+  .b-blue-black {
+    color: $b-blue-black;
+  }
+
   p {
     margin-top: 1rem;
     line-height: 1.6;
