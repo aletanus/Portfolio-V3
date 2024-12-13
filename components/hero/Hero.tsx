@@ -73,7 +73,8 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
           <br/>
           <br/>
           <b> • </b>
-          {t("As a Developer (Front-end | Back-end), I develop web and mobile applications with a focus on efficiency, scalability, and technical robustness.")}
+          {/* {t("As a Developer (Front-end | Back-end), I develop web and mobile applications with a focus on efficiency, scalability, and technical robustness.")} */}
+          {t("As a Developer, I develop web and mobile applications with a focus on efficiency, scalability, and technical robustness.")}
           <br/>
           <br/>
           <b> • </b>
