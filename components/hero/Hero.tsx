@@ -82,7 +82,9 @@ const Hero: React.FC<heroProps> = ({ heroRef }) => {
           <br/>
           <br/>
           <b className='b-blue-black'>{t("Do you need a professional to develop a system, app, or interface? ")}</b>
-          <b className='b-blue-black'>{t("I am available to assist you.")}</b>
+          <a href="#contact">
+              {t("I am available to assist you.")}
+          </a>
         </a.p>
         <a.a href="#featured" style={springs[3]}>
           <button tabIndex={-1}>{t("Check out my work")}</button>
