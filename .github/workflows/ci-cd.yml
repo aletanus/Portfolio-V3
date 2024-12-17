@@ -13,40 +13,56 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v3
+      - name: Checkout do código
+        uses: actions/checkout@v3
 
-    - name: Configurar o Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18  # Versão do Node.js
-        cache: 'yarn'
+      - name: Configurar o Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Versão do Node.js
+          cache: 'yarn'
 
-    - name: Instalar dependências
-      run: yarn install
+      - name: Instalar dependências
+        run: yarn install
 
-    - name: Build do Next.js
-      run: yarn build
+      - name: Build do Next.js
+        run: yarn build
 
-    - name: Verificar código com ESLint # Opcional
-      run: yarn lint
+      - name: Verificar código com ESLint # Opcional
+        run: yarn lint
 
   deploy:
     runs-on: ubuntu-latest
     needs: build  # Só roda se o job 'build' passar
-    environment: PORTFOLIO 
+    environment: PORTFOLIO
 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v3
+      - name: Checkout do código
+        uses: actions/checkout@v3
 
-    - name: Verificar Secrets
-      run: |
-        if [ -z "$VERCEL_TOKEN" ]; then echo "ERRO: VERCEL_TOKEN não está definido!"; exit 1; fi
-        if [ -z "$VERCEL_PROJECT_ID" ]; then echo "ERRO: VERCEL_PROJECT_ID não está definido!"; exit 1; fi
+      - name: Verificar Secrets
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "ERRO: VERCEL_TOKEN não está definido nos secrets do GitHub!"
+            exit 1
+          fi
+          if [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
+            echo "ERRO: VERCEL_PROJECT_ID não está definido nos secrets do GitHub!"
+            exit 1
+          fi
 
-    - name: Deploy para Vercel
-      env:
-        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Token armazenado nos secrets do GitHub
-        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}  # ID do projeto no Vercel
-      run: npx vercel --prod
+      - name: Debug Environment Variables
+        run: |
+          echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}"
+          echo "VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }}"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Deploy para Vercel com Logs Detalhados
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Token armazenado nos secrets do GitHub
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}  # ID do projeto no Vercel
+        run: |
+          echo "Iniciando deploy para Vercel..."
+          npx vercel --prod --debug --token $VERCEL_TOKEN --project-id $VERCEL_PROJECT_ID
