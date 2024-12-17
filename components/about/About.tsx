@@ -46,7 +46,7 @@ const About: React.FC<AboutProps> = ({ aboutRef }) => {
 
           <p>
             <b className='b-blue'>{t("As a Developer:")}</b>
-            {t(" I have experience with modern front-end technologies, including React, React Native, TypeScript, and CSS frameworks, along with familiarity in basic test writing using tools such as Jest, React Testing Library, and Playwright. I bring a strong sense of responsibility and a growth-oriented mindset. Additionally, I excel at working independently and autonomously while thriving in collaborative environments. My focus is on developing robust, efficient, and scalable systems and applications for both web and mobile platforms. I place technical efficiency at the core of my work, ensuring the final product meets business demands with quality and reliability.")}
+            {t(" I have experience with modern front-end technologies, including React, React Native, TypeScript, and CSS frameworks, as well as familiarity in basic test writing using tools such as Jest, React Testing Library, and Playwright, along with CI/CD pipelines. I bring a strong sense of responsibility and a growth-oriented mindset. Additionally, I excel at working independently and autonomously while thriving in collaborative environments. My focus is on developing robust, efficient, and scalable systems and applications for both web and mobile platforms. I place technical efficiency at the core of my work, ensuring the final product meets business demands with quality and reliability.")}
             <br/>
 
             <b className='b-blue'>{t(" • Mobile:")}</b>
