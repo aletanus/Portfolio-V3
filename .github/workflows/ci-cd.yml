@@ -34,6 +34,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build  # Só roda se o job 'build' passar
+    environment: PORTFOLIO 
 
     steps:
     - name: Checkout do código
