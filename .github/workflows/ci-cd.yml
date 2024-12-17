@@ -58,4 +58,4 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Token armazenado nos secrets do GitHub
         run: |
           echo "Iniciando deploy para Vercel..."
-          npx vercel --prod --yes --debug --token $VERCEL_TOKEN
+          npx vercel --prod --yes --debug --token "$VERCEL_TOKEN"
