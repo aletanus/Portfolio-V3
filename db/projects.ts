@@ -1,6 +1,18 @@
 // Image dimension ratios => 1.75
 const projects = [
   {
+    title: 'EasyMatch',
+    note: 'EasyMatch is a mobile app (Android and iOS), developed with React Native, designed for event scheduling and management.',
+    image: '/projects/FlexFuture.webp',
+    imgDims: { width: '2496 ', height: '1427' },
+    description: 'EasyMatch is a mobile app developed with React Native, designed for event scheduling and management. The project encompassed the creation of essential screens and features, focusing on delivering a functional product ready for publication on Android (Google Play) and iOS (App Store) platforms.',
+    stack: ['React Native'],
+    links: {
+      // github: 'https://github.com/aletanus/k-books',
+      live: 'https://portfolio-aletanus.vercel.app/assets/application-1cf17df5-412a-439c-9cb3-eb2271b353c4.apk',
+    },
+  },
+  {
     title: 'Flex Future',
     note: 'Flex Future is a Brazilian platform for the consultation and registration of companies.',
     image: '/projects/FlexFuture.webp',
