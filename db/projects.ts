@@ -3,7 +3,7 @@ const projects = [
   {
     title: 'EasyMatch',
     note: 'EasyMatch is a mobile app (Android and iOS), developed with React Native, designed for event scheduling and management.',
-    image: '/projects/FlexFuture.webp',
+    image: '/projects/EasyMatch.webp',
     imgDims: { width: '2496 ', height: '1427' },
     description: 'EasyMatch is a mobile app developed with React Native, designed for event scheduling and management. The project encompassed the creation of essential screens and features, focusing on delivering a functional product ready for publication on Android (Google Play) and iOS (App Store) platforms.',
     stack: ['React Native'],
@@ -22,6 +22,19 @@ const projects = [
     links: {
       // github: 'https://github.com/aletanus/k-books',
       live: 'https://flexfuture.vercel.app/',
+    },
+  },
+  {
+    title: 'CERB',
+    note: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
+    image: '/projects/CERB.webp',
+    imgDims: { width: '2496 ', height: '1427' },
+    description: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
+    stack: ['Figma'],
+    links: {
+      // github: 'https://github.com/aletanus/k-books',
+      // live: 'https://www.youtube.com/watch?v=YDzGxfJ8kVM&t=2s',
+      live: 'https://www.figma.com/design/nHG0Bagdeg1NWnukQuwyPU/CERB?m=auto&t=0o1AMt4hLbueShWc-1',
     },
   },
   {
