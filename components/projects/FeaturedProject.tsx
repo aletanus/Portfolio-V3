@@ -74,7 +74,9 @@ const FeaturedProject: React.FC<projectType> = (props) => {
               null
           }
           <a href={props.links.live} target="_blank" rel="noreferrer noopener" title={`${t(props.title)}'s live link`}>
-            <FiExternalLink />
+            <FiExternalLink 
+            />
+            <span>{props.linkTextTitle}</span>
           </a>
         </div>
       </div>

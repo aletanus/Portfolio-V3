@@ -1,15 +1,17 @@
 // Image dimension ratios => 1.75
 const projects = [
   {
-    title: 'EasyMatch',
-    note: 'EasyMatch is a mobile app (Android and iOS), developed with React Native, designed for event scheduling and management.',
-    image: '/projects/EasyMatch.webp',
+    title: 'CERB',
+    note: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
+    image: '/projects/CERB.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'EasyMatch is a mobile app developed with React Native, designed for event scheduling and management. The project encompassed the creation of essential screens and features, focusing on delivering a functional product ready for publication on Android (Google Play) and iOS (App Store) platforms.',
-    stack: ['React Native'],
+    description: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
+    stack: ['Figma'],
+    linkTextTitle: 'Visitar Projeto Figma',
     links: {
       // github: 'https://github.com/aletanus/k-books',
-      live: 'https://portfolio-aletanus.vercel.app/assets/application-1cf17df5-412a-439c-9cb3-eb2271b353c4.apk',
+      // live: 'https://www.youtube.com/watch?v=YDzGxfJ8kVM&t=2s',
+      live: 'https://www.figma.com/design/nHG0Bagdeg1NWnukQuwyPU/CERB?m=auto&t=0o1AMt4hLbueShWc-1',
     },
   },
   {
@@ -19,22 +21,23 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Flex Future is a Brazilian platform for the consultation and registration of companies. Through Flex Future, it is possible to search for companies and discover information about their work models (hybrid, remote, in-person), location, size, sector, and much more.',
     stack: ['PostgreSQL', 'Prisma', 'Nest', 'Next'],
+    linkTextTitle: 'Visitar Plataforma',
     links: {
       // github: 'https://github.com/aletanus/k-books',
       live: 'https://flexfuture.vercel.app/',
     },
   },
   {
-    title: 'CERB',
-    note: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
-    image: '/projects/CERB.webp',
+    title: 'EasyMatch',
+    note: 'EasyMatch is a mobile app (Android and iOS), developed with React Native, designed for event scheduling and management.',
+    image: '/projects/EasyMatch.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
-    stack: ['Figma'],
+    description: 'EasyMatch is a mobile app developed with React Native, designed for event scheduling and management. The project encompassed the creation of essential screens and features, focusing on delivering a functional product ready for publication on Android (Google Play) and iOS (App Store) platforms.',
+    stack: ['React Native'],
+    linkTextTitle: 'Baixar App Teste (Android)',
     links: {
       // github: 'https://github.com/aletanus/k-books',
-      // live: 'https://www.youtube.com/watch?v=YDzGxfJ8kVM&t=2s',
-      live: 'https://www.figma.com/design/nHG0Bagdeg1NWnukQuwyPU/CERB?m=auto&t=0o1AMt4hLbueShWc-1',
+      live: 'https://portfolio-aletanus.vercel.app/assets/application-1cf17df5-412a-439c-9cb3-eb2271b353c4.apk',
     },
   },
   {
@@ -44,6 +47,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'K-Books is a system designed to efficiently manage both physical and digital libraries. Through K-Books, it\'s also possible to provide readers access to digital editions of books and various documents in PDF format, enhancing the library experience.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
+    linkTextTitle: 'Visitar Documentação Swagger',
     links: {
       github: 'https://github.com/aletanus/k-books',
       live: 'https://k-books.onrender.com/api/docs/swagger-ui/',
@@ -56,6 +60,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
+    linkTextTitle: 'Visitar Documentação Swagger',
     links: {
       github: 'https://github.com/aletanus/m5-bandkamp-generic-view-aletanus',
       live: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',

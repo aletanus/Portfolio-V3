@@ -90,10 +90,16 @@
     gap: 1rem;
 
     a {
+      display: flex;
+      align-items: center;
       font-size: 1.25rem;
       color: $text;
       transition: color 0.25s ease;
       outline-offset: 3px;
+
+      span {
+        margin-left: 8px;
+      }
     }
 
     a:hover {
