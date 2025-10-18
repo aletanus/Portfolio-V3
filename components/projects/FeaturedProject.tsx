@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { projectType } from "../../db/projects";
 import { a, useSpring } from "@react-spring/web";
@@ -74,10 +74,18 @@ const FeaturedProject: React.FC<projectType> = (props) => {
               null
           }
           <a href={props.links.live} target="_blank" rel="noreferrer noopener" title={`${t(props.title)}'s live link`}>
-            <FiExternalLink 
-            />
-            <span>{props.linkTextTitle}</span>
+            <FiExternalLink/>
+            <span>{t(props.linkTextTitle!)}</span>
           </a>
+          {
+            props.linkPresentation ?
+              <a href={props.links.presentation} target="_blank" rel="noreferrer noopener" title={`${t(props.title)}'s presentation link`}>
+                <FiExternalLink/>
+                  <span>{t(props.linkPresentation)}</span>
+              </a>
+            :
+              null
+          }
         </div>
       </div>
       <div className="featuredProject__image">

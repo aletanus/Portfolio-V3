@@ -7,7 +7,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Front-end development of web and mobile interfaces for the Integra System, with a focus on usability and performance, optimized to ensure a smooth user experience even on devices with limited resources. Final client: Companhia de Engenharia Hídrica e de Saneamento da Bahia (CERB).',
     stack: ['Figma'],
-    linkTextTitle: 'Visitar Projeto Figma',
+    linkTextTitle: 'Visit Figma Project',
     links: {
       // github: 'https://github.com/aletanus/k-books',
       // live: 'https://www.youtube.com/watch?v=YDzGxfJ8kVM&t=2s',
@@ -21,10 +21,12 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Technical leadership in the end-to-end development of the platform, encompassing interface design as well as front-end and back-end programming. FlexFuture is a platform designed to map companies in Brazil according to their work models (hybrid, remote, or on-site).',
     stack: ['PostgreSQL', 'Prisma', 'Nest', 'Next'],
-    linkTextTitle: 'Visitar Plataforma',
+    linkTextTitle: 'Visit Platform',
+    linkPresentation: 'View Presentation',
     links: {
       // github: 'https://github.com/aletanus/k-books',
       live: 'https://flexfuture.vercel.app/',
+      presentation: "/assets/Apresentação - Flex Future.pdf",
     },
   },
   {
@@ -34,7 +36,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Front-end development for EasyMatch, a native mobile application for Android and iOS focused on event scheduling and management. The project was prepared for publication on the official app stores.',
     stack: ['React Native'],
-    linkTextTitle: 'Baixar App Teste (Android)',
+    linkTextTitle: 'Download Test App (Android)',
     links: {
       // github: 'https://github.com/aletanus/k-books',
       live: 'https://portfolio-aletanus.vercel.app/assets/application-1cf17df5-412a-439c-9cb3-eb2271b353c4.apk',
@@ -47,7 +49,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Back-end development of the K-BOOKS API, a system designed for managing both physical and digital books. The project enables loan management, user registration, and catalog administration for academic and public libraries, with integration for digital versions in PDF format.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
-    linkTextTitle: 'Visitar Documentação Swagger',
+    linkTextTitle: 'Visit Swagger Documentation',
     links: {
       github: 'https://github.com/aletanus/k-books',
       live: 'https://k-books.onrender.com/api/docs/swagger-ui/',
@@ -60,7 +62,7 @@ const projects = [
     imgDims: { width: '2496 ', height: '1427' },
     description: 'Back-end development of the BandKamp API, a system designed to facilitate the management of users, albums, and songs. It allows users to log in, create, update, and delete their own albums and tracks in a practical and efficient way.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
-    linkTextTitle: 'Visitar Documentação Swagger',
+    linkTextTitle: 'Visit Swagger Documentation',
     links: {
       github: 'https://github.com/aletanus/bandkamp',
       live: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',

@@ -73,6 +73,12 @@
   "Back-end development of the BandKamp API, a system designed to facilitate the management of users, albums, and songs. It allows users to log in, create, update, and delete their own albums and tracks in a practical and efficient way.": "Back-end development of the BandKamp API, a system designed to facilitate the management of users, albums, and songs. It allows users to log in, create, update, and delete their own albums and tracks in a practical and efficient way.",
   "The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.": "The purpose of the PokéVerse is to visually and engagingly showcase the Pokémon universe to both newcomers and enthusiasts. It houses the complete collection of over 1,000 existing Pokémon.",
   "K.Hub is a web application that enables developers to register the technologies in which they have expertise or are learning, assisting them in tracking their progress and proficiency levels within each registered technology.": "K.Hub is a web application that enables developers to register the technologies in which they have expertise or are learning, assisting them in tracking their progress and proficiency levels within each registered technology.",
-  "This second version of the Burger Shop application not only encompasses the foundational Front End system for product presentation, selection, addition, and order calculation within the shopping cart but also includes customer registration and an exclusive session for each client.": "This second version of the Burger Shop application not only encompasses the foundational Front End system for product presentation, selection, addition, and order calculation within the shopping cart but also includes customer registration and an exclusive session for each client."
+  "This second version of the Burger Shop application not only encompasses the foundational Front End system for product presentation, selection, addition, and order calculation within the shopping cart but also includes customer registration and an exclusive session for each client.": "This second version of the Burger Shop application not only encompasses the foundational Front End system for product presentation, selection, addition, and order calculation within the shopping cart but also includes customer registration and an exclusive session for each client.",
+
+  "Visit Figma Project":"Visit Figma Project",
+  "Visit Platform":"Visit Platform",
+  "View Presentation":"View Presentation",
+  "Download Test App (Android)":"Download Test App (Android)",
+  "Visit Swagger Documentation":"Visit Swagger Documentation"
 }
 
