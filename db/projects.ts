@@ -5,7 +5,7 @@ const projects = [
     note: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
     image: '/projects/CERB.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'Development of web and mobile interfaces for the Integra System, with the Water Engineering and Sanitation Company of Bahia (CERB) as the end client.',
+    description: 'Front-end development of web and mobile interfaces for the Integra System, with a focus on usability and performance, optimized to ensure a smooth user experience even on devices with limited resources. Final client: Companhia de Engenharia Hídrica e de Saneamento da Bahia (CERB).',
     stack: ['Figma'],
     linkTextTitle: 'Visitar Projeto Figma',
     links: {
@@ -19,7 +19,7 @@ const projects = [
     note: 'Flex Future is a Brazilian platform for the consultation and registration of companies.',
     image: '/projects/FlexFuture.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'Flex Future is a Brazilian platform for the consultation and registration of companies. Through Flex Future, it is possible to search for companies and discover information about their work models (hybrid, remote, in-person), location, size, sector, and much more.',
+    description: 'Technical leadership in the end-to-end development of the platform, encompassing interface design as well as front-end and back-end programming. FlexFuture is a platform designed to map companies in Brazil according to their work models (hybrid, remote, or on-site).',
     stack: ['PostgreSQL', 'Prisma', 'Nest', 'Next'],
     linkTextTitle: 'Visitar Plataforma',
     links: {
@@ -32,7 +32,7 @@ const projects = [
     note: 'EasyMatch is a mobile app (Android and iOS), developed with React Native, designed for event scheduling and management.',
     image: '/projects/EasyMatch.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'EasyMatch is a mobile app developed with React Native, designed for event scheduling and management. The project encompassed the creation of essential screens and features, focusing on delivering a functional product ready for publication on Android (Google Play) and iOS (App Store) platforms.',
+    description: 'Front-end development for EasyMatch, a native mobile application for Android and iOS focused on event scheduling and management. The project was prepared for publication on the official app stores.',
     stack: ['React Native'],
     linkTextTitle: 'Baixar App Teste (Android)',
     links: {
@@ -45,7 +45,7 @@ const projects = [
     note: 'K-Books: A physical and digital books library management system.',
     image: '/projects/K.Books.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'K-Books is a system designed to efficiently manage both physical and digital libraries. Through K-Books, it\'s also possible to provide readers access to digital editions of books and various documents in PDF format, enhancing the library experience.',
+    description: 'Back-end development of the K-BOOKS API, a system designed for managing both physical and digital books. The project enables loan management, user registration, and catalog administration for academic and public libraries, with integration for digital versions in PDF format.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     linkTextTitle: 'Visitar Documentação Swagger',
     links: {
@@ -58,11 +58,11 @@ const projects = [
     note: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
     image: '/projects/BandKamp.webp',
     imgDims: { width: '2496 ', height: '1427' },
-    description: 'BandKamp is a system designed to streamline the management of users, albums, and songs. It enables users to log in, create, update, and delete their own albums and songs in a practical and efficient manner.',
+    description: 'Back-end development of the BandKamp API, a system designed to facilitate the management of users, albums, and songs. It allows users to log in, create, update, and delete their own albums and tracks in a practical and efficient way.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     linkTextTitle: 'Visitar Documentação Swagger',
     links: {
-      github: 'https://github.com/aletanus/m5-bandkamp-generic-view-aletanus',
+      github: 'https://github.com/aletanus/bandkamp',
       live: 'https://bandkamp-m5-s5.onrender.com/api/docs/swagger/',
     },
   },

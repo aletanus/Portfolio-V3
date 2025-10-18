@@ -1,12 +1,13 @@
 import { IconType } from "react-icons";
-import { FaGithub, FaGitAlt, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaPython, FaSass, } from "react-icons/fa";
-import { SiNextdotjs, SiExpress, SiPostgresql, SiTypescript, SiDjango, SiStyledcomponents, SiTailwindcss, SiNestjs, SiPrisma, SiSqlite, SiJest } from "react-icons/si";
+import { FaGithub, FaWordpressSimple } from "react-icons/fa";
+import { SiNextdotjs, SiExpress } from "react-icons/si";
 
 const stacks = [
   { title: "React", img: "/stacks/react.svg" },
   { title: "Next", img: SiNextdotjs },
   { title: "Node.JS", img: "/stacks/node-js.svg" },
   { title: "Figma", img: "/stacks/figma.svg" },
+  { title: "WordPress", img: FaWordpressSimple },
   { title: "Python", img: "/stacks/python.svg" },
   { title: "JavaScript", img: "/stacks/javascript.svg" },
   { title: "TypeScript", img: "/stacks/typescript.svg" },
