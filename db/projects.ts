@@ -50,9 +50,11 @@ const projects = [
     description: 'Back-end development of the K-BOOKS API, a system designed for managing both physical and digital books. The project enables loan management, user registration, and catalog administration for academic and public libraries, with integration for digital versions in PDF format.',
     stack: ['Python', 'PostgreSQL', 'Django-Rest-Framework'],
     linkTextTitle: 'Visit Swagger Documentation',
+    linkPresentation: 'View Presentation',
     links: {
       github: 'https://github.com/aletanus/k-books',
       live: 'https://k-books.onrender.com/api/docs/swagger-ui/',
+      presentation: "/assets/Apresentação - K-Books.pdf",
     },
   },
   {
